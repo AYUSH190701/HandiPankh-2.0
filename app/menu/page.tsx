@@ -36,7 +36,6 @@ export default function MenuPage() {
     setLoading(true);
     
     let filteredItems = [...menuItems];
-
     if (filters.category && filters.category !== 'all') {
       filteredItems = filteredItems.filter(item => 
         filters.category === 'veg' ? item.isVeg : !item.isVeg
@@ -99,7 +98,10 @@ export default function MenuPage() {
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-2 text-gray-900">Our Menu</h1>
-          <p className="text-gray-600">Choose from our wide variety of authentic biryanis</p>
+          <p className="text-gray-600 mb-2">Shahi Hyderabadi • Nawabi Lucknowi • Kolkata Dawat</p>
+          <p className="text-sm text-orange-700 font-medium bg-orange-50 inline-block px-3 py-1 rounded-full">
+            Portion sizes: 300gm (Serves 1) | ½kg (Serves 1–2) | 1kg (Serves 2–3)
+          </p>
         </div>
 
         {/* Filter Toggle for Mobile */}

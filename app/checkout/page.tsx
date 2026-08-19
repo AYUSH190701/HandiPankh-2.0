@@ -227,7 +227,7 @@ export default function CheckoutPage() {
                         className={`w-full pl-10 pr-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 ${
                           errors.phone ? 'border-red-500' : 'border-gray-300'
                         }`}
-                        placeholder="8882025186"
+                        placeholder="9560245235"
                       />
                     </div>
                     {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}

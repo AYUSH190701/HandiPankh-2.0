@@ -193,11 +193,11 @@ export default function OrderConfirmationPage() {
               <p className="text-gray-700 mb-3">Our customer support team is here to assist you.</p>
               <div className="flex gap-4">
                 <button className="text-blue-600 hover:text-blue-700 font-medium">
-                  Call +91 8882025186
+                  Call +91 95602 45235
                 </button>
                 <span className="text-gray-400">|</span>
                 <button className="text-blue-600 hover:text-blue-700 font-medium">
-                  Email support@biryanipankh.com
+                  Email handipankh@gmail.com
                 </button>
               </div>
             </div>
