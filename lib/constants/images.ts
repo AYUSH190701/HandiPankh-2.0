@@ -1,24 +1,38 @@
 export const REAL_IMAGES = {
-  hero: '/images/biryani/chicken-biryani-2.jpg',
+  hero: '/images/biryani/chickenHyderabadi.png',
   biryani: {
+    // Hyderabadi
+    vegHyd: '/images/biryani/veghyderabadi.png',
+    paneerHyd: '/images/biryani/Paneer Hyderabadi.png',
+    kathalHyd: '/images/biryani/KathalHyderabadi.png',
+    eggHyd: '/images/biryani/egghyderabadi.png',
+    chicken65Hyd: '/images/biryani/chicken65.png',
+    chickenHyd: '/images/biryani/chickenHyderabadi.png',
+    chickenBoneless: '/images/biryani/chickenboneless.png',
+    chickenDoGuna: '/images/biryani/chickendoguna.png',
+    muttonHyd: '/images/biryani/mutton hyderabadi.png',
+    // Lucknowi
+    vegLuck: '/images/biryani/veglucknowi.png',
+    chickenLuck: '/images/biryani/chickenlucknowi.png',
+    muttonLuck: '/images/biryani/muttonlucknowi.png',
+    // Kolkata
+    chickenKolk: '/images/biryani/chickenkolkata.png',
+    muttonKolk: '/images/biryani/kolkatamutton.png',
+    // Generic fallbacks
     chicken: [
-      '/images/biryani/chicken-biryani-1.jpg',
-      '/images/biryani/chicken-biryani-2.jpg'
+      '/images/biryani/chickenHyderabadi.png',
+      '/images/biryani/chickenlucknowi.png',
     ],
     mutton: [
-      '/images/biryani/mutton-biryani-1.jpg',
-      '/images/biryani/mutton-biryani-2.jpg'
+      '/images/biryani/mutton hyderabadi.png',
+      '/images/biryani/muttonlucknowi.png',
     ],
     veg: [
-      '/images/biryani/veg-biryani-1.jpg',
-      '/images/biryani/veg-biryani-2.jpg'
+      '/images/biryani/veghyderabadi.png',
+      '/images/biryani/veglucknowi.png',
     ],
-    egg: [
-      '/images/biryani/egg-biryani-1.jpg'
-    ],
-    prawn: [
-      '/images/biryani/prawn-biryani-1.jpg'
-    ]
+    egg: ['/images/biryani/egghyderabadi.png'],
+    prawn: ['/images/biryani/chickenHyderabadi.png'],
   },
   dishes: {
     curry: '/images/dishes/curry-1.jpg',
@@ -40,7 +54,6 @@ export const REAL_IMAGES = {
 };
 
 export const getPlaceholderImage = (type: string, subtype?: string): string => {
-  // Use real images when available, fallback to SVG placeholders
   switch(type) {
     case 'hero':
       return REAL_IMAGES.hero;
@@ -48,19 +61,18 @@ export const getPlaceholderImage = (type: string, subtype?: string): string => {
     case 'biryani':
       if (subtype && REAL_IMAGES.biryani[subtype as keyof typeof REAL_IMAGES.biryani]) {
         const images = REAL_IMAGES.biryani[subtype as keyof typeof REAL_IMAGES.biryani];
-        return Array.isArray(images) ? images[Math.floor(Math.random() * images.length)] : images;
+        return Array.isArray(images) ? images[0] : images as string;
       }
-      // Fallback to chicken biryani if subtype not found
       return REAL_IMAGES.biryani.chicken[0];
     
     case 'chicken':
-      return REAL_IMAGES.biryani.chicken[Math.floor(Math.random() * REAL_IMAGES.biryani.chicken.length)];
+      return REAL_IMAGES.biryani.chicken[0];
     
     case 'mutton':
-      return REAL_IMAGES.biryani.mutton[Math.floor(Math.random() * REAL_IMAGES.biryani.mutton.length)];
+      return REAL_IMAGES.biryani.mutton[0];
     
     case 'veg':
-      return REAL_IMAGES.biryani.veg[Math.floor(Math.random() * REAL_IMAGES.biryani.veg.length)];
+      return REAL_IMAGES.biryani.veg[0];
     
     case 'egg':
       return REAL_IMAGES.biryani.egg[0];
@@ -71,13 +83,13 @@ export const getPlaceholderImage = (type: string, subtype?: string): string => {
     
     case 'avatar':
     case 'person':
-      return REAL_IMAGES.avatars[Math.floor(Math.random() * REAL_IMAGES.avatars.length)];
+      return REAL_IMAGES.avatars[0];
     
     case 'restaurant':
       if (subtype === 'kitchen') {
         return REAL_IMAGES.restaurant.kitchen;
       } else if (subtype === 'chef') {
-        return REAL_IMAGES.restaurant.chef[Math.floor(Math.random() * REAL_IMAGES.restaurant.chef.length)];
+        return REAL_IMAGES.restaurant.chef[0];
       }
       return REAL_IMAGES.restaurant.kitchen;
     
@@ -92,10 +104,6 @@ export const getPlaceholderImage = (type: string, subtype?: string): string => {
       return REAL_IMAGES.dishes.kebab;
     
     default:
-      // Fallback to SVG placeholder for unknown types
-      const generateColoredPlaceholder = (color: string, text: string) => {
-        return `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='${encodeURIComponent(color)}' width='800' height='600'/%3E%3Ctext fill='white' font-size='24' font-family='system-ui' x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle'%3E${encodeURIComponent(text)}%3C/text%3E%3C/svg%3E`;
-      };
-      return generateColoredPlaceholder('#f97316', 'Biryani Pankh');
+      return REAL_IMAGES.biryani.chicken[0];
   }
 };

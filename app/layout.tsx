@@ -21,8 +21,9 @@ export const metadata: Metadata = {
   description: 'Order authentic Hyderabadi biryani online. Fresh ingredients, traditional recipes, and fast delivery. Best biryani in town with 4.8★ rating.',
   keywords: [
     'biryani', 'hyderabadi biryani', 'food delivery', 'indian food', 'online food order',
-    'chicken biryani', 'mutton biryani', 'veg biryani', 'authentic biryani', 'bangalore food delivery',
-    'halal food', 'traditional recipes', 'spicy food', 'basmati rice'
+    'chicken biryani', 'mutton biryani', 'veg biryani', 'authentic biryani', 'delhi food delivery',
+    'handi pankh', 'biryani palam extension', 'dwarka biryani', 'traditional recipes', 'dum biryani',
+    'lucknowi biryani', 'kolkata biryani', 'swiggy', 'zomato'
   ],
   authors: [{ name: 'Handi Pankh' }],
   creator: 'Handi Pankh',
@@ -95,17 +96,17 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Restaurant",
-              "name": "Biryani Pankh",
-              "description": "Authentic Hyderabadi Biryani Delivery",
+              "name": "Handi Pankh",
+              "description": "Authentic Hyderabadi, Lucknowi & Kolkata Biryani — From our Handi to your Heart",
               "url": config.app.url,
               "telephone": config.contact.phone,
               "email": config.contact.email,
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "G-74, Gali No 10, Som Bazar Road Rajapuri",
-                "addressLocality": "New Delhi",
+                "streetAddress": "Shop NO-1, A-80, Palam Extension, Ramlphal Chowk",
+                "addressLocality": "Dwarka, New Delhi",
                 "addressRegion": "Delhi",
-                "postalCode": "110037",
+                "postalCode": "110075",
                 "addressCountry": "IN"
               },
               "aggregateRating": {
@@ -117,11 +118,11 @@ export default function RootLayout({
               "servesCuisine": "Indian",
               "paymentAccepted": ["Cash", "Credit Card", "UPI"],
               "hasMenu": `${config.app.url}/menu`,
-              "openingHours": "Mo-Su 11:00-22:00",
+              "openingHours": "Mo-Su 11:00-23:00",
               "sameAs": [
-                config.social.facebook,
                 config.social.instagram,
-                config.social.twitter
+                config.social.swiggy,
+                config.social.zomato
               ]
             })
           }}

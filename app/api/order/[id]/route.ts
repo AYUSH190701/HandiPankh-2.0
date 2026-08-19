@@ -22,8 +22,8 @@ export async function GET(
       paymentMethod: 'card',
       customer: {
         name: 'John Doe',
-        phone: '+91 8882025186',
-        address: 'G-74, Gali No 10, Som Bazar Road Rajapuri, New Delhi'
+        phone: '+91 95602 45235',
+        address: 'Shop NO-1, A-80, Palam Extension, Ramlphal Chowk Dwarka New Delhi-110075'
       },
       createdAt: new Date(),
       updatedAt: new Date(),

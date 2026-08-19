@@ -1,7 +1,7 @@
 export const config = {
   app: {
-    name: 'Biryani Pankh',
-    description: 'Authentic Hyderabadi Biryani Delivery',
+    name: 'Handi Pankh',
+    description: 'Authentic Hyderabadi Biryani - From our Handi to your Heart',
     url: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
     version: '1.0.0',
   },
@@ -27,7 +27,7 @@ export const config = {
     phoneNumber: process.env.TWILIO_PHONE_NUMBER || '',
   },
   admin: {
-    email: process.env.ADMIN_EMAIL || 'admin@biryanipankh.com',
+    email: process.env.ADMIN_EMAIL || 'handipankh@gmail.com',
     password: process.env.ADMIN_PASSWORD || '',
   },
   auth: {
@@ -67,14 +67,17 @@ export const config = {
     ],
   },
   contact: {
-    phone: '+91 8882025186',
-    email: 'order@biryanipankh.com',
-    address: 'G-74, Gali No 10, Som Bazar Road Rajapuri, New Delhi',
+    phone: '+91 95602 45235',
+    phone2: '+91 11 4173 5235',
+    email: 'handipankh@gmail.com',
+    address: 'Shop NO-1, A-80, Palam Extension, Ramlphal Chowk Dwarka New Delhi-110075',
   },
   social: {
-    facebook: 'https://facebook.com/biryanipankh',
-    instagram: 'https://instagram.com/biryanipankh',
-    twitter: 'https://twitter.com/biryanipankh',
+    facebook: 'https://facebook.com/handipankh',
+    instagram: 'https://instagram.com/handipankh_biriyani',
+    twitter: 'https://twitter.com/handipankh',
+    swiggy: 'https://www.swiggy.com/city/delhi/handipankh-biryani-palam-extension-sector-7-rest1402099',
+    zomato: 'https://www.zomato.com/ncr/handi-pankh-sector-7-dwarka-new-delhi/order',
   },
 } as const;
 

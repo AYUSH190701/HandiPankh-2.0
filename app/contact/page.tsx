@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { config } from '@/lib/config';
 
 export const metadata: Metadata = {
   title: 'Contact Us - Get in Touch',
-  description: 'Contact Biryani Pankh for orders, feedback, or support. Find our location, hours, phone number, and email. We\'re here to help!',
+  description: 'Contact Handi Pankh for orders, feedback, or support. Find our location, hours, phone number, and email. We\'re here to help!',
   openGraph: {
-    title: 'Contact Biryani Pankh - Get in Touch',
+    title: 'Contact Handi Pankh - Get in Touch',
     description: 'Reach out to us for orders, feedback, or support. Find our contact details and location information.',
   },
 };
@@ -15,7 +16,7 @@ export default function ContactPage() {
     {
       icon: '📞',
       title: 'Phone',
-      details: [config.contact.phone, 'Available 24/7 for orders'],
+      details: [config.contact.phone, config.contact.phone2, 'Call for orders & home delivery'],
       action: `tel:${config.contact.phone.replace(/\s/g, '')}`
     },
     {
@@ -33,7 +34,7 @@ export default function ContactPage() {
     {
       icon: '🕒',
       title: 'Hours',
-      details: ['11:00 AM - 10:00 PM', 'Open all days of the week'],
+      details: ['11:00 AM - 11:00 PM', 'Open all days of the week'],
       action: null
     }
   ];
@@ -98,20 +99,27 @@ export default function ContactPage() {
                 Follow Us
               </h3>
               <div className="flex space-x-6">
-                {[
-                  { name: 'Facebook', url: config.social.facebook, icon: '📘' },
-                  { name: 'Instagram', url: config.social.instagram, icon: '📷' },
-                  { name: 'Twitter', url: config.social.twitter, icon: '🐦' }
-                ].map((social, index) => (
+                <a href={config.social.instagram} target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-gray-700 hover:text-orange-600 transition-colors">
+                  <span className="text-xl">📷</span><span>Instagram</span>
+                </a>
+                <a href={config.social.swiggy} target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                  <Image src="/images/logos/swiggy.jpeg" alt="Swiggy" width={28} height={28} className="rounded-md" />
+                  <span className="text-gray-700">Order on Swiggy</span>
+                </a>
+                <a href={config.social.zomato} target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                  <Image src="/images/logos/zomato.svg" alt="Zomato" width={28} height={28} />
+                  <span className="text-gray-700">Order on Zomato</span>
+                </a>
+                {[].map((social, index) => (
                   <a
                     key={index}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-gray-700 hover:text-orange-600 transition-colors"
+                    href=""
+                    className="hidden"
                   >
-                    <span className="text-xl">{social.icon}</span>
-                    <span>{social.name}</span>
+                    <span></span>
                   </a>
                 ))}
               </div>
@@ -194,7 +202,7 @@ export default function ContactPage() {
                   id="phone"
                   name="phone"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all"
-                  placeholder="+91 8882025186"
+                  placeholder="+91 95602 45235"
                 />
               </div>
 
