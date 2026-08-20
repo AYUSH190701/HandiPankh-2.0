@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/images/og-image.jpg',
-        width: 1200,
+        width: 630,
         height: 630,
         alt: 'Handi Pankh - Authentic Biryani',
       },
@@ -102,6 +102,8 @@ export default function RootLayout({
               "name": "Handi Pankh",
               "description": "Authentic Hyderabadi, Lucknowi & Kolkata Biryani — From our Handi to your Heart",
               "url": config.app.url,
+              "logo": `${config.app.url}/images/logos/main.png`,
+              "image": `${config.app.url}/images/og-image.jpg`,
               "telephone": config.contact.phone,
               "email": config.contact.email,
               "address": {
