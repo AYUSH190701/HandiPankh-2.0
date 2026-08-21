@@ -3,11 +3,15 @@ import Image from 'next/image';
 import { config } from '@/lib/config';
 
 export const metadata: Metadata = {
-  title: 'Contact Us - Get in Touch',
-  description: 'Contact Handi Pankh for orders, feedback, or support. Find our location, hours, phone number, and email. We\'re here to help!',
+  title: 'Contact Handi Pankh | Order Biryani in Dwarka & Palam Extension',
+  description: 'Contact Handi Pankh to order authentic biryani in Dwarka & Palam Extension, New Delhi. Call us, WhatsApp, or visit our outlet. Chicken biryani, mutton biryani & more — fast delivery available.',
+  keywords: [
+    'order biryani dwarka', 'order biryani palam extension', 'biryani contact delhi',
+    'handi pankh contact', 'biryani delivery near me', 'biryani outlet new delhi'
+  ],
   openGraph: {
-    title: 'Contact Handi Pankh - Get in Touch',
-    description: 'Reach out to us for orders, feedback, or support. Find our contact details and location information.',
+    title: 'Order Biryani in Dwarka & Palam Extension | Handi Pankh',
+    description: 'Call or WhatsApp Handi Pankh to order fresh dum biryani in Dwarka & Palam Extension, Delhi. Fast delivery, authentic taste.',
   },
 };
 

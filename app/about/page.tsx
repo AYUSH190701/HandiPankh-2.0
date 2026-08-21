@@ -5,11 +5,15 @@ import { REAL_IMAGES } from '@/lib/constants/images';
 import { config } from '@/lib/config';
 
 export const metadata: Metadata = {
-  title: 'About Us - Our Story & Values',
-  description: 'Learn about Handi Pankh — our passion for authentic Hyderabadi, Lucknowi and Kolkata biryani, traditional recipes, and commitment to quality.',
+  title: 'About Handi Pankh | Our Biryani Story, Recipes & Values',
+  description: 'Handi Pankh was born from a love for authentic dum biryani. Discover how we craft Hyderabadi, Lucknowi & Kolkata biryani using age-old recipes, saffron-infused rice & hand-picked spices — served fresh in Dwarka, Delhi.',
+  keywords: [
+    'about handi pankh', 'biryani story', 'authentic dum biryani', 'hyderabadi biryani recipe',
+    'traditional biryani', 'best biryani brand delhi', 'biryani restaurant dwarka'
+  ],
   openGraph: {
-    title: 'About Handi Pankh - Our Story & Values',
-    description: 'Discover our journey of bringing authentic dum biryani to your doorstep with traditional recipes and premium ingredients.',
+    title: 'About Handi Pankh | The Story Behind Delhi\'s Best Biryani',
+    description: 'From slow-cooked dum biryani to hand-ground spices — learn how Handi Pankh brings authentic Hyderabadi, Lucknowi & Kolkata biryani to your table.',
   },
 };
 
