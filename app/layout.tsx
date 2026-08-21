@@ -15,15 +15,29 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Handi Pankh - Authentic Hyderabadi Biryani Delivery',
-    template: '%s | Handi Pankh'
+    default: 'Handi Pankh | Best Biryani in Dwarka & Palam Extension, Delhi',
+    template: '%s | Handi Pankh Biryani'
   },
-  description: 'Order authentic Hyderabadi biryani online. Fresh ingredients, traditional recipes, and fast delivery. Best biryani in town with 4.8★ rating.',
+  description: 'Order the best biryani in Dwarka & Palam Extension, Delhi. Handi Pankh serves authentic Hyderabadi dum biryani, Lucknowi biryani & Kolkata biryani. Chicken, Mutton & Veg biryani — fresh, flavourful & delivered fast. Rated 4.8★ by 50,000+ customers.',
   keywords: [
-    'biryani', 'hyderabadi biryani', 'food delivery', 'indian food', 'online food order',
-    'chicken biryani', 'mutton biryani', 'veg biryani', 'authentic biryani', 'delhi food delivery',
-    'handi pankh', 'biryani palam extension', 'dwarka biryani', 'traditional recipes', 'dum biryani',
-    'lucknowi biryani', 'kolkata biryani', 'swiggy', 'zomato'
+    // Core product
+    'biryani', 'best biryani', 'dum biryani', 'authentic biryani', 'biryani delivery',
+    // Varieties
+    'hyderabadi biryani', 'lucknowi biryani', 'kolkata biryani', 'nawabi biryani', 'awadhi biryani',
+    // Proteins
+    'chicken biryani', 'mutton biryani', 'veg biryani', 'paneer biryani', 'egg biryani',
+    'chicken 65 biryani', 'boneless chicken biryani', 'mutton dum biryani',
+    // Location
+    'biryani in dwarka', 'biryani in palam extension', 'biryani near me', 'best biryani in delhi',
+    'biryani delivery dwarka', 'biryani delivery palam extension', 'biryani delivery new delhi',
+    // Starters
+    'kebab', 'chicken tikka', 'seekh kebab', 'malai tikka', 'paneer 65', 'chicken 65',
+    // Brand
+    'handi pankh', 'handipankh biryani', 'handi pankh delhi',
+    // Ordering
+    'order biryani online', 'biryani swiggy', 'biryani zomato', 'online biryani order delhi',
+    // Qualifiers
+    'fresh biryani', 'homestyle biryani', 'restaurant style biryani', 'traditional biryani recipe'
   ],
   authors: [{ name: 'Handi Pankh' }],
   creator: 'Handi Pankh',
@@ -39,24 +53,24 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: 'en_IN',
     url: config.app.url,
-    title: 'Handi Pankh - Authentic Hyderabadi Biryani Delivery',
-    description: 'Order authentic Hyderabadi biryani online. Fresh ingredients, traditional recipes, and fast delivery.',
-    siteName: 'Handi Pankh',
+    title: 'Handi Pankh | Best Biryani in Dwarka & Palam Extension, Delhi',
+    description: 'Order the best biryani in Dwarka & Palam Extension, Delhi. Authentic Hyderabadi, Lucknowi & Kolkata dum biryani — chicken, mutton & veg. Rated 4.8★ by 50,000+ customers.',
+    siteName: 'Handi Pankh Biryani',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 630,
         height: 630,
-        alt: 'Handi Pankh - Authentic Biryani',
+        alt: 'Handi Pankh - Authentic Hyderabadi Dum Biryani Delhi',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Handi Pankh - Authentic Hyderabadi Biryani',
-    description: 'Order authentic Hyderabadi biryani online. Fresh ingredients, traditional recipes.',
+    title: 'Handi Pankh | Best Biryani in Delhi — Hyderabadi, Lucknowi & Kolkata',
+    description: 'Authentic dum biryani in Dwarka & Palam Extension, Delhi. Chicken, Mutton & Veg biryani — fresh & fast delivery. 4.8★ rated.',
     images: ['/images/og-image.jpg'],
     creator: '@handipankh',
   },
@@ -120,10 +134,11 @@ export default function RootLayout({
                 "reviewCount": "5000"
               },
               "priceRange": "₹₹",
-              "servesCuisine": "Indian",
+              "servesCuisine": ["Indian", "Biryani", "Hyderabadi", "Mughlai", "Awadhi"],
               "paymentAccepted": ["Cash", "Credit Card", "UPI"],
               "hasMenu": `${config.app.url}/menu`,
               "openingHours": "Mo-Su 11:00-23:00",
+              "keywords": "biryani, hyderabadi biryani, dum biryani, chicken biryani, mutton biryani, best biryani dwarka, best biryani palam extension, delhi biryani",
               "sameAs": [
                 config.social.instagram,
                 config.social.swiggy,
