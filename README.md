@@ -1,4 +1,4 @@
-# 🍛 Biryani Pankh - Production-Ready Food Ordering Platform
+# 🍛 HandiPankh Biryani- Production-Ready Food Ordering Platform
 
 A modern, full-stack Biryani ordering website built with Next.js 14, TypeScript, Tailwind CSS, and Stripe payment integration. This production-ready application features a professional design, comprehensive e-commerce functionality, and optimized performance.
 
